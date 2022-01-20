@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Weather App</title>
+    <script src="./assets/js/nasa.js" defer></script>
+</head>
+<body>
+    <header class="weather">
+        <h1 class="mars-lastest-weather">Rich Present The Latest Weather At Elysium Plantitia</h1>
+    </header>
+    <div class="card">
+    <div class="search">
+        <input type="text" class="search-bar">
+        <button><svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        </div>
+
+                <main class="mars-current-weather">
+               
+                    <div class="date">
+                      <h2 class="current-sol-data">
+                        <strong>Sol</strong>
+                        <span data-current-sol>677</span>
+                       </h2>
+                      <p class="date__day" data-current-date></p>
+                    </div>
+               
+                    <div class="temp">
+                      <h3 class="current-temp">Temperature</h3>
+                      <p class="reading">
+                        High:
+                        <span data-current-temp-high></span>
+                        °<span data-temp-unit></span>
+                       </p>
+                      <p class="reading-low">
+                        Low:
+                        <span data-current-temp-low></span>
+                        °<span data-temp-unit></span>
+                       </p>
+                    </div>
+               
+                    <div class="wind">
+                      <h3 class="wind-data">Wind Speed</h3>
+                      <p class="reading-wind">
+                        <span data-wind-speed></span>
+                        <span data-speed-unit></span>
+                       </p>
+               
+                      <div class="wind__speed">
+                      </div>
+                    </div> 
+               
+                    <div class="unit">
+                      <label for="cel">°C</label>
+                    
+                     
+                    </div> 
+               
+                  </main>
+               
+                  <div class="previous-weather">
+               
+                    <h3 class="main-previous-weather">Previous 7 Sols</h3> 
+               
+                    <div class="previous-days" data-previous-sols></div>
+                  </div>
+               
+                  <template data-previous-sol-template>
+                     <div class="previous-day">
+                       <h3 class="previous-day__sol">
+                         Sol
+                         <span data-sol></span>
+                       </h3>
+                       <p class="previous-day__date" data-date></p>
+                       <p class="previous-day__temp">
+                         High:
+                         <span data-temp-high></span>
+                         °<span data-temp-unit></span>
+                       </p>
+                       <p class="previous-day__temp">
+                         Low:
+                         <span data-temp-low></span>
+                         °<span data-temp-unit></span>
+                       </p>
+                     </div>
+                  </template>
+
+        </div>
+</body>
+</html>
