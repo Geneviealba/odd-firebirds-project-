@@ -6,23 +6,35 @@
 var API_KEY = '2zRoGDLiY046ud4jRHrL2suv6DvQjT3glRPkV6DP'
 
 var API_URL = 'https://mars.nasa.gov/rss/api/?feed=weather&category=insight_temperature&feedtype=json&ver=1.0'
-console.log(API_URL);
-
 var selectedSolIndex
+var selectedSol
+
+var currentSolElement = document.querySelector('[data-current-sol]');
+var currentDateElement = document.querySelector('[data-current-date]');
+var currentTempHighElement = document.querySelector('[data-current-temp-high]');
+var currentTempLowElement = document.querySelector('[data-current-temp-low]');
+var currentWindSpeedElement = document.querySelector('[data-wind-speed]');
+var currentTempLowElement = document.querySelector('[data-current-temp-low]');
+
 // |code for getting the Specific API data 
 
 fetchNasaData().then(sols => {
     selectedSolIndex = sols.length - 1
+    console.log(sols)
     displaySelectedSol(sols)
-    displayData(data)
 })
-
+// display current sol on the screen 
 function displaySelectedSol(sols) {
-    var selectedSol = sols[selectedSolIndex]
+    selectedSol = sols[selectedSolIndex]
     console.log(selectedSol)
+    currentSolElement.innerText = selectedSol.sol
+    currentDateElement .innerText = selectedSol.date
+    currentTempHighElement.innerText = selectedSol.maxTemp
+    currentTempLowElement.innerText = selectedSol.minTemp
+    currentWindSpeedElement.innerText = selectedSol.windSpeed
 }
 
-
+// Defining async function, storing response, storing data in form of JSON 
   async function fetchNasaData() {
       const res = await fetch(API_URL);
       const data = await res.json();
@@ -42,48 +54,3 @@ function displaySelectedSol(sols) {
       });
   }
 
-//   code to display on the page 
-
-  const displayData = () => {
-    document.querySelector('.date').innerText = "current-sol-data" + sol;
-    document.querySelector('.temp').innerText = "reading" + maxTemp;
-    document.querySelector('.current-temp').innerText = "reading-low" + minTemp;
-    document.querySelector(".wind-data").innerText = "reading-wind" + windspeed;
-    document.querySelector(".unit").innerText = "cel" + "°C";
-    document.querySelector(".wind-speed").innerText =
-    "Wind speed: " + speed + " km/h";
-  }
-  fetchNasaData()
-
-  function createForecastCard(sol, maxTemp, minTemp, windSpeed) {
-
-    // HTML elements for display of previous sols
-    let previouSolCardEl = $("<h3>").attr("class", "previous-day__sol");
-    let cardPreviousData = $("<p>").attr("class", "previous-day__date");
-
-    cardRow.append(previousSolEl);
-    cardPreviousData.text(sol);
-    cardSpeed.attr(windSpeed);
-    cardTemp.text(`Temp: ${temp} °C`);
-
-    previouSolCardEl.append(sol, maxTemp, minTemp, cardTemp, windSpeed);
-  }
-  
-  
-  search: function () {
-    this.fetchNASAData(document.querySelector(".search-bar").value);
-  }
-
-document.querySelector(".search button").addEventListener("click", function () {
-  sol.search();
-});
-
-document
-  .querySelector(".search-bar")
-  .addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-      sol.search();
-    }
-  });
-
-weather.fetchWeather("sol");
