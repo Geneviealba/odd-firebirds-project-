@@ -1,0 +1,83 @@
+body {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia22486-main.jpg");
+    background-color: #8d553a;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .container-out {
+    font-family: "Fira Sans", sans-serif,;
+    padding: 15px 0;
+    }
+    
+    .container-in {
+    width: 95%;
+    margin: 0 auto;
+    }
+    
+    .search-container {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+    }
+    
+    .search-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #1ca0b8;
+    }
+    
+    #search-input {
+    width: 90%;
+    padding: 13px;
+    border-radius: 4px;
+    border: 2px solid #1ca0b8;
+    font-size: 15px;
+    }
+    
+    #search-input:focus {
+    outline: none;
+    }
+    
+    #search-results {
+    border: 2px solid #1ca0b8;
+    background-color:#1ca0b8;
+    text-align: center;
+    border-radius: 10px;
+    
+    }
+    .search-item {
+    color: white;
+    cursor: pointer;
+    }
+    .search-item p {
+    margin: 0;
+    padding: 10px;
+    }
+    .search-item:hover {
+    background: #2cc7e2;
+    }
+    #search-data {
+    margin-top: 10px;
+    color: #1ca0b8;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    #search-data p {
+    margin: 0;
+    padding: 6px;
+    font-size: 16px;
+    }
+
+    .info-card{
+        background-image: linear-gradient(#FFAA00, #FFFFFF);
+        width: 200px;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 10px;
+        filter: drop-shadow(5px, 5px, 0px, #606060);
+        flex: 1 0 auto;
+    }

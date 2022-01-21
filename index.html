@@ -10,12 +10,70 @@
 
 <body>
     <main>
-        <div id="searchbar">
-            <script src="script.js"></script>
-            <script async src="https://cse.google.com/cse.js?cx=840748339acdfc50a"></script>
-            <div class="gcse-searchbox-only" data-resultsUrl="http://www.example.com" data-newWindow="true" data-queryParameterName="search" enableAutoComplete="true">
-        </div>
+        
     </main>
 </body>
 
+
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>What's The Weather on Mars</title>
+</head>
+
+<body>
+    <div class="container-out">
+        <div class="container-in">
+            <div class="search-container">
+                <div class="search-engine">
+                    <h1 class="search-title"><a href="">Weather on Mars</a></h1>
+                    <div id="searchbar">
+                        <div class="gcse-searchbox-only" data-resultsUrl="http://www.Geneviealba.github.io/odd-firebirds-project-/" data-newWindow="true" data-queryParameterName="search" enableAutoComplete="true">
+                    </div>
+                </div>
+                <section id="search-results">
+                    <h1 id="titleHeader">Use the search bar above to retrieve Martian weather data</h1>
+                </section>
+                <div id="search-data">
+                    <section hidden class="info-card" id="maxTempCard">
+                        <h3>Max Temperature:</h3>
+                        <span id="maxTempData"></span>
+                    </section>
+
+                    <section hidden class="info-card" id="minTempCard">
+                        <h3>Minimum Temperature:</h3>
+                        <span id="minTempData"></span>
+                    </section>
+
+                    <section hidden class="info-card" id="windSpeedCard">
+                        <h3>Wind Speed:</h3>
+                        <span id="windSpeedData"></span>
+                    </section>
+
+                    <section hidden class="info-card" id="windDirectionCard">
+                        <h3>Wind Direction:</h3>
+                        <span id="windDirectionData"></span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+<script async src="https://cse.google.com/cse.js?cx=840748339acdfc50a"></script>
 </html>
