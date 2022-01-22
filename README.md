@@ -42,11 +42,13 @@ A rough breakdown of tasks:
 David - Google Custom Search API integration to help retrieve info from NASA API
 Jason- HTML and CSS framework integration 
 Genevie- Integration of the NASA’s InsSight APIs
+## The GitHub Repository Link 
+https://github.com/Geneviealba/odd-firebirds-project-
 
-A deployed version can be viewed here.
+## A deployed version can be viewed here.
 https://geneviealba.github.io/odd-firebirds-project-/
 
-Mock up
+## Mock up
 
 
 
